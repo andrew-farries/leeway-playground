@@ -1,0 +1,14 @@
+packages:
+- name: lib
+  type: yarn
+  srcs:
+  - "./*.js"
+  - package.json
+  config:
+    yarnlock: "yarn.lock"
+    packaging: library
+    dontTest: false
+    commands:
+      install: ["echo", "installing"]
+      build: ["echo", "building"]
+      test: ["yarn", "test"]
